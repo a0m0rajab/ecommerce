@@ -5,21 +5,21 @@ const products = {
                 "name": "EVENTIX",
                 "price": 2665,
                 "description": "Occaecat pariatur irure minim mollit qui adipisicing irure labore amet exercitation aliquip. Et duis ea enim pariatur consectetur aliquip amet officia. Labore ea consectetur deserunt mollit magna veniam non pariatur labore exercitation elit exercitation elit nostrud. Eu est ut ad incididunt consectetur officia exercitation incididunt. Nisi ea id do qui elit irure ad veniam enim deserunt laborum reprehenderit mollit. Velit amet aliquip velit proident.\n\nExcepteur eu qui amet nulla dolor. Esse aliqua nisi reprehenderit deserunt. Magna commodo laboris labore magna nulla eu in et qui irure quis. Aliqua officia proident culpa qui proident aute nisi esse. Veniam commodo est fugiat anim incididunt non tempor.",
-                "image": "https://picsum.photos/seed/",
+                "image": "https://zenowa.com/wp-content/uploads/2020/08/t-60-disposable-mask-body-making-machine-10.jpg",
                 "rate": 4
             },
             {
                 "name": "ZOSIS",
                 "price": 232,
                 "description": "Incididunt aliqua ipsum dolore excepteur id sint proident qui nisi sit aliqua. Laborum cupidatat nisi aute cillum. Sit laboris in incididunt Lorem labore eiusmod ullamco aliqua. Enim est nostrud ipsum non pariatur culpa nisi. Exercitation excepteur occaecat occaecat labore cillum anim deserunt amet. Aute labore ad commodo reprehenderit in et in amet esse est. Eiusmod nisi ullamco duis cupidatat commodo voluptate.\n\nDo sint occaecat et ad. Non enim est qui ea reprehenderit ad quis reprehenderit cillum est id qui. Anim do enim occaecat culpa consectetur in incididunt ex fugiat enim aute do est. Aliqua laboris labore elit irure cupidatat Lorem velit culpa laboris laboris laborum dolore. Exercitation Lorem fugiat cupidatat irure exercitation minim laborum incididunt irure. Eu sit sint excepteur labore ullamco veniam ullamco.",
-                "image": "https://picsum.photos/seed/",
+                "image": "https://zenowa.com/wp-content/uploads/2020/08/001-a-4-1.jpg",
                 "rate": 4
             },
             {
                 "name": "SYBIXTEX",
                 "price": 2845,
                 "description": "Reprehenderit voluptate qui commodo excepteur. Cupidatat proident occaecat id ad ea nostrud esse adipisicing ipsum. Aliqua aute nulla magna quis id qui velit veniam sint velit consequat et cillum.\n\nDolore labore irure aliquip aute velit exercitation laboris quis proident proident. Ex do velit elit fugiat aliquip sint deserunt. Est duis sint cupidatat minim est ipsum occaecat minim deserunt duis.",
-                "image": "https://picsum.photos/seed/",
+                "image": "https://zenowa.com/wp-content/uploads/2020/08/001-c-4.jpg",
                 "rate": 2
             },
             {
