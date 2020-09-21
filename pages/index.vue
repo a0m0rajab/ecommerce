@@ -1,21 +1,21 @@
 <template>
 <v-container fluid>
-    <v-row justify="center" align="center">
-        <v-col cols="12">
+    <v-col justify="center" align="center">
+        <v-row>
             <mainCard />
-        </v-col>
+        </v-row>
 
-        <v-col cols="12">
-            <cardGroups />
-        </v-col>
+        <v-row>
+            <cardGroups title="Categories" :items="products" />
+        </v-row>
 
-        <v-col cols="12">
-            <cardGroups />
-        </v-col>
-        <v-col>
+        <v-row>
+            <cardGroups title="whatEver" />
+        </v-row>
+        <v-row>
             <information />
-        </v-col>
-    </v-row>
+        </v-row>
+    </v-col>
 </v-container>
 </template>
 
@@ -25,6 +25,9 @@ import VuetifyLogo from '~/components/VuetifyLogo.vue'
 import mainCard from '~/components/mainCard'
 import cardGroups from '~/components/cardGroups'
 import information from '~/components/information'
+import {
+    products
+} from '~/middleware/items'
 
 export default {
     components: {
@@ -34,5 +37,11 @@ export default {
         cardGroups,
         information,
     },
+    data: () => {
+        return {
+            products,
+        }
+    },
+    created: () => {},
 }
 </script>

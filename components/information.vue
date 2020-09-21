@@ -1,17 +1,48 @@
 <template>
-<v-item-group>
-    <v-container>
-        <v-row>
-            <v-col v-for="n in 4" :key="n" cols="12" md="3">
-                <v-item v-slot:default="{ active, toggle }">
-                    <v-card :color="active ? 'primary' : ''" class="d-flex align-center" dark height="200" @click="toggle">
-                        <v-scroll-y-transition>
-                            <div v-if="active" class="display-3 flex-grow-1 text-center">Active</div>
-                        </v-scroll-y-transition>
-                    </v-card>
-                </v-item>
-            </v-col>
-        </v-row>
-    </v-container>
-</v-item-group>
+<v-container fluid>
+    <v-row>
+        <h2>Our values</h2>
+    </v-row>
+    <v-row width="100%">
+        <v-col v-for="(item,index) in items" :key="index" sm="12" md="3" cols="3">
+            <v-item>
+                <trustCard :title="item.title" :description="item.description" :icon="item.icon" />
+            </v-item>
+        </v-col>
+    </v-row>
+</v-container>
 </template>
+
+<script>
+import trustCard from '~/components/trustCard'
+export default {
+    components: {
+        trustCard,
+    },
+    data: () => {
+        return {
+            items: [{
+                    title: 'Why us?',
+                    description: 'We are the best in the coutnry, why not?',
+                    icon: 'mdi-account-search-outline',
+                },
+                {
+                    title: 'Fast delivery',
+                    description: 'We deliver to everywhere just hire us',
+                    icon: 'mdi-truck-delivery-outline',
+                },
+                {
+                    title: 'Customer Focused',
+                    description: 'We Focus about the value we add to our customer',
+                    icon: 'mdi-account-arrow-left-outline',
+                },
+                {
+                    title: 'Fast delivery',
+                    description: 'We deliver to everywhere just hire us',
+                    icon: 'mdi-truck-delivery-outline',
+                },
+            ],
+        }
+    },
+}
+</script>

@@ -1,48 +1,45 @@
 <template>
 <v-app>
-    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
-        <v-list>
-            <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
-                <v-list-item-action>
-                    <v-icon>{{ item.icon }}</v-icon>
-                </v-list-item-action>
-                <v-list-item-content>
-                    <v-list-item-title v-text="item.title" />
-                </v-list-item-content>
-            </v-list-item>
-        </v-list>
-    </v-navigation-drawer>
     <v-app-bar elevate-on-scroll class="rounded-b-xl" color="white" dense app>
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-        <v-btn icon @click.stop="miniVariant = !miniVariant">
-            <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-        </v-btn>
-        <v-btn icon @click.stop="clipped = !clipped">
-            <v-icon>mdi-application</v-icon>
-        </v-btn>
-        <v-btn icon @click.stop="fixed = !fixed">
-            <v-icon>mdi-minus</v-icon>
-        </v-btn>
-        <v-toolbar-title v-text="title" />
+        <v-menu offset-y content-class="rounded-xl">
+            <template class="rounded-xl" v-slot:activator="{ on, attrs }">
+                <v-app-bar-nav-icon v-bind="attrs" v-on="on" @click.stop="drawer = !drawer" />
+            </template>
+            <v-list>
+                <v-list-item v-for="(item, index) in items" :key="index" nuxt :to="item.to" @click>
+                    <v-icon>{{ item.icon }}</v-icon>
+                    <v-list-item-title>{{item.title }}</v-list-item-title>
+                </v-list-item>
+            </v-list>
+        </v-menu>
+        <v-toolbar-title style="overflow:visible" v-text="title" />
+
+        <v-responsive>
+            <v-text-field label="Serah" v-model="search" dense flat hide-details prepend-inner-icon="mdi-magnify" rounded solo />
+        </v-responsive>
     </v-app-bar>
     <v-main>
         <v-container>
             <nuxt />
         </v-container>
     </v-main>
-    <v-footer :absolute="!fixed" app>
+    <v-footer absolute app>
         <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
 </v-app>
 </template>
 
 <script>
+import {
+    products
+} from '~/middleware/items'
+console.log(products)
 export default {
     data() {
         return {
+            search: '',
             clipped: false,
             drawer: false,
-            fixed: false,
             items: [{
                     icon: 'mdi-apps',
                     title: 'Welcome',
@@ -57,7 +54,7 @@ export default {
             miniVariant: false,
             right: true,
             rightDrawer: false,
-            title: 'Vuetify.js',
+            title: 'Zenowa',
         }
     },
 }
