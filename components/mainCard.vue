@@ -8,7 +8,7 @@
                 <h2>You will got the best from us</h2>
                 <br />
                 <v-responsive max-width="40vw">
-                    <v-text-field label="Serah" v-model="search" dense flat hide-details prepend-inner-icon="mdi-magnify" rounded solo />
+                    <v-text-field label="search" v-model="search" dense flat hide-details prepend-inner-icon="mdi-magnify" rounded solo />
                 </v-responsive>
             </v-col>
             <v-col md="4">
@@ -18,3 +18,13 @@
     </v-card-text>
 </v-card>
 </template>
+
+<script>
+export default {
+    data: () => {
+        return {
+            search: '',
+        }
+    },
+}
+</script>

@@ -15,7 +15,7 @@
         <v-toolbar-title style="overflow:visible" v-text="title" />
 
         <v-responsive>
-            <v-text-field label="Serah" v-model="search" dense flat hide-details prepend-inner-icon="mdi-magnify" rounded solo />
+            <v-text-field label="search" v-model="search" dense flat hide-details prepend-inner-icon="mdi-magnify" rounded solo />
         </v-responsive>
     </v-app-bar>
     <v-main>

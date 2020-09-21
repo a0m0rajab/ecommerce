@@ -10,7 +10,7 @@
         </v-row>
 
         <v-row>
-            <cardGroups title="whatEver" />
+            <cardGroups title="Case studies" :items="products" />
         </v-row>
         <v-row>
             <information />

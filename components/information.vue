@@ -4,7 +4,7 @@
         <h2>Our values</h2>
     </v-row>
     <v-row width="100%">
-        <v-col v-for="(item,index) in items" :key="index" sm="12" md="3" cols="3">
+        <v-col v-for="(item,index) in items" :key="index" class="col-12 col-md-3">
             <v-item>
                 <trustCard :title="item.title" :description="item.description" :icon="item.icon" />
             </v-item>
